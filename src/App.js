@@ -16,7 +16,6 @@ function App() {
       let newBoard = [...board];
       newBoard[index] = currentPlayer;
       setBoard(newBoard);
-
       currentPlayer === 'X' ? setCurrentPlayer('O') : setCurrentPlayer('X');
     }
   }
@@ -32,7 +31,11 @@ function App() {
           return (
             <>
               {/* {index === 3 || index === 6 ? <br /> : null} */}
-              <div className='cell' key={index} onClick={() => handleClick(index)}>
+              <div
+                className={`cell ${space}`}
+                key={index}
+                onClick={() => handleClick(index)}
+              >
                 <h3>{space}</h3>
               </div>
             </>

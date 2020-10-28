@@ -33,10 +33,15 @@
   border: 0.5px solid #ccc;
 }
 
-.blue {
+.cell.X {
   color: #3989d4;
 }
 
-.green {
+.cell.O {
   color: #5bbdd4;
 }
+
+/* .cell.O,
+.cell.X {
+  cursor: not-allowed;
+} */
