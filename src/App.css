@@ -5,6 +5,11 @@
   font-family: 'Fredoka One', cursive;
 }
 
+p {
+  text-align: center;
+  font-size: 5rem;
+}
+
 .App {
   height: 100vh;
   background-color: #fff;
@@ -20,10 +25,14 @@
   grid-template-columns: repeat(3, 240px);
   grid-template-rows: repeat(3, 240px);
   gap: 1rem;
-  border: 1px solid #000;
+}
+
+.board.game-over {
+  opacity: 0.5;
 }
 
 .cell {
+  background-color: lightgray;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -31,6 +40,7 @@
   font-weight: bold;
   cursor: pointer;
   border: 0.5px solid #ccc;
+  border-radius: 5%;
 }
 
 .cell.X {
@@ -41,7 +51,44 @@
   color: #5bbdd4;
 }
 
-/* .cell.O,
-.cell.X {
+.cell.O,
+.cell.X,
+.game-over .cell {
   cursor: not-allowed;
-} */
+}
+
+footer {
+  text-align: center;
+}
+
+.win-message {
+  margin: 2rem;
+}
+
+.win-message span.O {
+  color: #5bbdd4;
+}
+
+.win-message span.X {
+  color: #3989d4;
+}
+
+.win-message span.D {
+  color: #d47096;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: #5bbdd4;
+  color: #fff;
+  border-radius: 10%;
+  border: 1px solid #5bbdd4;
+}
+
+button:hover {
+  background-color: #4590a1;
+  cursor: pointer;
+}
