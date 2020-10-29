@@ -3,15 +3,8 @@ import './App.css';
 
 const initialBoard = Array(9).fill(null);
 
-//print the boar with empty strings - OK
-// check to see if cell is empty - OK
-//when we click to set x or O - OK
-//check winning condition
-
 function App() {
   function handleClick(index) {
-    // console.log(index, board[index]);
-
     if (winner) {
       alert('Acabou o jogo!');
       return null;
