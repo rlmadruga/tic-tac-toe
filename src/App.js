@@ -6,7 +6,7 @@ const initialBoard = Array(9).fill(null);
 function App() {
   function handleClick(index) {
     if (winner) {
-      alert('Acabou o jogo!');
+      alert('The Game is over!');
       return null;
     }
 
